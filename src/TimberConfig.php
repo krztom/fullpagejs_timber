@@ -43,13 +43,12 @@ class TimberConfig
       'footer_3' => Timber::get_widgets( 'footer-3' ),
       'sidebar' => Timber::get_widgets( 'sidebar' ),
     );
-    $context['Controller'] = apply_filters( 'fitness/context/controller', new Controller );
     return $context;
   }
 
   /**
    * Extend twig
-   * 
+   *
    * @param Timber\Twig Twig instance modified by Timber
    */
   public function extendTwig($twig)
@@ -57,7 +56,7 @@ class TimberConfig
     $twig->addFunction( new Twig_Function('teik_asset', 'teik_asset'));
     $twig->addFunction( new Twig_Function('teik_svg', 'teik_svg'));
     $twig->addFunction( new Twig_Function('img', 'teik_image_tag'));
-    
+
     $twig->addFunction( new Twig_Function('teik_icon', 'teik_icon'));
     return $twig;
   }

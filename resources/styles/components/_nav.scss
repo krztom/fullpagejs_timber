@@ -1,0 +1,167 @@
+.nav {
+  $self: &;
+
+  &__toggle {
+    padding: 0.5rem;
+    width: 2.5rem;
+    flex: 0 0 2.5rem;
+    max-width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 2rem;
+    @include colorSVG(#fff);
+    border: none;
+    background: $color-primary;
+
+    svg {
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__menu {
+    @include list-unstyled;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    text-transform: uppercase;
+
+    &.current-menu-item {
+      font-weight: 700;
+    }
+
+    &-icon {
+      display: inline-block;
+      margin-left: 0.5rem;
+      margin-top: 0.1rem;
+      @include colorSVG($color-primary);
+
+      svg {
+        display: block;
+        max-width: 1.2rem;
+      }
+    }
+
+    &.is-highlight {
+      #{$self}__item-icon {
+        @include colorSVG(#fff);
+      }
+
+      #{$self}__link {
+        line-height: 1;
+        color: #fff;
+        background: $color-primary;
+        border-radius: 2rem;
+        padding: 0.5em 1em;
+        display: inline-flex;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+          background: $color-secondary;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: $color-primary;
+    font-size: 1.3rem;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+      color: $color-secondary;
+      text-decoration: none;
+    }
+  }
+
+  @include max-width("xl") {
+    &__wrap {
+      background: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      transition: all 0.3s;
+      opacity: 0;
+      visibility: hidden;
+      transform: scaleY(0);
+      transform-origin: 50% 0;
+      padding: 2rem 1rem;
+      flex-direction: column;
+
+      &.is-open {
+        transform: scaleY(1);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__social-media {
+      margin-top: auto;
+      padding-top: 1rem;
+    }
+
+    &__heading {
+      display: flex;
+      align-items: center;
+      padding-bottom: 1.5rem;
+      justify-content: space-between;
+
+      &-logo {
+        margin-bottom: 0;
+        max-width: 350px;
+      }
+    }
+
+    &__menu {
+      padding: 0 1rem;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    &__item {
+      padding: 0.5rem 0;
+    }
+
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include min-width('xl') {
+    padding-left: 1rem;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__heading {
+      display: none;
+    }
+
+    &__menu {
+      display: flex;
+      align-items: center;
+    }
+
+    &__wrap {
+      align-items: center;
+    }
+
+    &__item {
+      padding: 0 0.5rem;
+
+
+    }
+  }
+}

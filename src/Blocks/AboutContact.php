@@ -8,7 +8,7 @@ class AboutContact extends AbstractBlock
 {
     use Singleton;
 
-    public $name = 'about-contact.twig';
+    public $name = 'about-contact';
 
     public $title = 'O produkcie + kontakt';
 }

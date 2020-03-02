@@ -7,7 +7,7 @@ use Timber\Timber;
 class AbstractBlock
 {
     private $viewsPath = 'components/blocks';
-
+    private $namespace = 'acf';
     public function hook()
     {
         add_action('acf/init', [$this, 'register']);
@@ -22,7 +22,7 @@ class AbstractBlock
             'render_callback'   => [$this, 'render'],
             'mode' => $this->getMode(),
             'category'          => $this->getCategory(),
-            'supports'          => $this->getSupports()
+            // 'supports'          => $this->getSupports()
         ));
     }
 

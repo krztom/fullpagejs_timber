@@ -1,0 +1,18 @@
+.header {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    flex: 1;
+    max-width: 350px;
+  }
+
+  @include min-width('xl') {
+    &__logo {
+      max-width: 450px;
+    }
+  }
+}
