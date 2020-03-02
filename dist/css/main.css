@@ -332,6 +332,7 @@ html {
 
 body {
   color: #000;
+  font-family: "Montserrat", sans-serif;
 }
 
 ::-moz-selection {
@@ -439,6 +440,9 @@ dl {
   }
 }
 
+.header {
+  padding-bottom: 2rem;
+}
 .header__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,5 +669,41 @@ dl {
   .social-media__item {
     margin-right: 0;
     max-width: 2rem;
+  }
+}
+
+.main-banner__body {
+  position: relative;
+}
+.main-banner__image {
+  margin-bottom: 0;
+}
+.main-banner__heading {
+  color: #fff;
+  background: #de0613;
+  border-radius: 3rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding: 1em 2em;
+}
+@media (min-width: 992px) {
+  .main-banner__heading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 4rem;
+    text-align: right;
+    padding: 1em 1.5em;
+    text-transform: uppercase;
+    -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+    -webkit-transform: translateX(1.5em);
+        -ms-transform: translateX(1.5em);
+            transform: translateX(1.5em);
+  }
+}
+@media (min-width: 1200px) {
+  .main-banner__heading {
+    font-size: 2.5rem;
   }
 }

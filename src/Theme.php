@@ -74,7 +74,7 @@ class Theme
     public function styles()
     {
         wp_dequeue_style('wp-block-library');
-        wp_enqueue_style('teik-font', 'https://fonts.googleapis.com/css?family=Montserrat:300,500,400,700&display=swap&subset=latin-ext');
+        wp_enqueue_style('teik-font', 'https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap&subset=latin-ext');
         if (WP_DEBUG || $_SERVER['HTTP_HOST'] == 'localhost') {
             wp_enqueue_style('teik-main', teik_asset('css/main.css'));
         } else {
