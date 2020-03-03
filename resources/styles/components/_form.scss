@@ -1,0 +1,37 @@
+.form {
+  &__field {
+    padding-bottom: 1rem;
+
+    input:not([type="radio"]),
+    input:not([type="checkbox"]),
+    textarea {
+      background: $color-secondary;
+      border-radius: 2rem;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      max-width: 100%;
+      border: none;
+
+      &::placeholder {
+        color: #fff;
+      }
+    }
+
+    textarea {
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+    }
+  }
+
+  &__submit {
+    text-align: right;
+
+    input[type="submit"] {
+      background: $color-primary;
+      color: #fff;
+      border-radius: 2rem;
+      padding: 0.5rem 1.5rem;
+      border: none;
+    }
+  }
+}

@@ -3,13 +3,13 @@
 		{{ teik_svg('contact.svg') }}
 	</figure>
 	<div class="contact-data__body">
-		<p class="contact-data__intro">{{ contact_data.above_phone }}</p>
+		<p class="contact-data__intro">{{ options.contact_data.above_phone }}</p>
 		<p class="contact-data__phone">
-			<a href="tel: {{ contact_data.phone }}">{{ contact_data.phone }}</a>
+			<a href="tel: {{ options.contact_data.phone }}">{{ options.contact_data.phone }}</a>
 		</p>
-		<p class="contact-data__below">{{ contact_data.below_phone }}</p>
+		<p class="contact-data__below">{{ options.contact_data.below_phone }}</p>
 	</div>
 	<figure class="contact-data__person">
-		{{ img(TimberImage(contact_data.person_image), 'full') }}
+		{{ img(TimberImage(options.contact_data.person_image), 'full') }}
 	</figure>
 </div>

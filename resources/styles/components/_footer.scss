@@ -1,0 +1,30 @@
+.footer {
+  padding: 3rem 0;
+
+  &__form {
+    padding-bottom: 2rem;
+    @extend .about-contact__content;
+    max-width: 600px;
+    margin: auto
+  }
+
+  &__contact-data {
+    text-align: center;
+    @extend .about-contact__data;
+  }
+
+  &__address {
+    padding: 2rem 0;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  @include min-width('xl') {
+    &__body {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -15,7 +15,7 @@ class AboutContact extends AbstractBlock
     public function getBlockData(array $data = []): array
     {
         $data = parent::getBlockData();
-        $data['contact_data'] = get_field('contact_data', 'options');
+        $data['options']['contact_data'] = get_field('contact_data', 'options');
         return $data;
     }
 }

@@ -1,3 +1,23 @@
 <footer id="mainfooter" class="footer">
+	<div class="container">
+		<div class="footer__body">
+			<div class="footer__form">
+				<div class="form">
+					{% filter shortcodes %}
+						[contact-form-7 id="{{ options.contact_form }}"]
+					{% endfilter %}
+				</div>
+			</div>
+			<div class="footer__contact-data">
+				{% include 'components/contact-data.twig' %}
+				<div class="footer__address">
+					{{ options.address }}
+				</div>
+				<div class="footer__social-media">
+					{% include 'components/social-media.twig' %}
+				</div>
+			</div>
 
+		</div>
+	</div>
 </footer>
