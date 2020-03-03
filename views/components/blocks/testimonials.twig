@@ -1,0 +1,41 @@
+<div class="container">
+	<section class="testimonials">
+		<div class="testimonials__body">
+			<header class="heading heading--light heading--center">
+				<h2>{{ title }}</h2>
+			</header>
+			<div class="swiper-container js-testimonials">
+				<div class="swiper-wrapper">
+					{% for item in testimonials %}
+						<div class="swiper-slide">
+							<div class="testimonials__item">
+								<div class="testimonials__item-content">{{ item.content }}</div>
+								<div class="testimonials__author">
+									<p class="testimonials__author-name">{{ item.meta('name') }}</p>
+									<p class="testimonials__author-company">{{ item.meta('company') }}</p>
+								</div>
+
+							</div>
+						</div>
+					{% endfor %}
+					{% for item in testimonials %}
+						<div class="swiper-slide">
+							<div class="testimonials__item">
+								<div class="testimonials__item-content">{{ item.content }}</div>
+								<div class="testimonials__author">
+									<p class="testimonials__author-name">{{ item.meta('name') }}</p>
+									<p class="testimonials__author-company">{{ item.meta('company') }}</p>
+								</div>
+
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="testimonials__arrows">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

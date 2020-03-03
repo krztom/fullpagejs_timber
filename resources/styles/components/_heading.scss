@@ -2,6 +2,7 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  color: $color-secondary;
 
   h1,
   h2,
@@ -9,9 +10,16 @@
   h4,
   h5,
   h6 {
-    color: $color-secondary;
     font-size: inherit;
     font-weight: inherit;
     margin: 0;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--light {
+    color: #fff;
   }
 }

@@ -5,4 +5,5 @@ import {
   Toggle
 } from "./components/Toggle";
 import "./components/YTPlayer";
+import "./components/Carousel";
 Toggle();

@@ -25,6 +25,7 @@
     },
     "private": true,
     "dependencies": {
-        "bootstrap": "^4.4.1"
+        "bootstrap": "^4.4.1",
+        "swiper": "^5.3.6"
     }
 }
