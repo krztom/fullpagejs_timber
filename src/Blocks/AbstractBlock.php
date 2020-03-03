@@ -22,7 +22,7 @@ class AbstractBlock
             'render_callback'   => [$this, 'render'],
             'mode' => $this->getMode(),
             'category'          => $this->getCategory(),
-            // 'supports'          => $this->getSupports()
+            'supports'          => $this->getSupports()
         ));
     }
 

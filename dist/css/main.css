@@ -333,6 +333,7 @@ html {
 body {
   color: #29235c;
   font-family: "Montserrat", sans-serif;
+  font-size: 18px;
 }
 
 ::-moz-selection {
@@ -750,6 +751,23 @@ dl {
   }
 }
 
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.heading h1,
+.heading h2,
+.heading h3,
+.heading h4,
+.heading h5,
+.heading h6 {
+  color: #de0613;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
 .main-banner__body {
   position: relative;
 }
@@ -812,5 +830,71 @@ dl {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
+  }
+}
+
+.image-content {
+  padding: 2rem 0 4rem;
+}
+.image-content__image {
+  margin-bottom: 2rem;
+}
+.image-content__image img {
+  border-radius: 3rem;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.image-content__body:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: #de0613;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  border-radius: 3px;
+  margin-top: 4rem;
+}
+@media (min-width: 992px) {
+  .image-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 4rem 0 5rem;
+  }
+  .image-content__body, .image-content__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .image-content__body {
+    padding-left: 2rem;
+  }
+  .image-content--image-right .image-content__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .image-content--image-right .image-content__body {
+    padding-left: 0;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .image-content__body {
+    padding-left: 5%;
+  }
+  .image-content__body, .image-content__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+    max-width: 45%;
+  }
+  .image-content--image-right .image-content__body {
+    padding-right: 5%;
   }
 }

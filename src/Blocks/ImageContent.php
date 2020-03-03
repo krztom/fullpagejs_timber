@@ -10,4 +10,12 @@ class ImageContent extends AbstractBlock
 
     public $name = 'image-content';
     public $title = 'Tekst + zdjęcie';
+
+    public function getSupports()
+    {
+        return [
+            'align' => ['left', 'right'],
+            'anchor' => true
+        ];
+    }
 }

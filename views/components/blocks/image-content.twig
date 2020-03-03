@@ -1,0 +1,15 @@
+<div class="container">
+	<section class="image-content {{ block.align ? 'image-content--image-' ~ block.align : '' }}">
+		<figure class="image-content__image">
+			{{ img(TimberImage(image), 'large') }}
+		</figure>
+		<div class="image-content__body">
+			<header class="heading">
+				<h2>{{ title }}</h2>
+			</header>
+			<div class="image-content__content">
+				{{ content }}
+			</div>
+		</div>
+	</section>
+</div>
