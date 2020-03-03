@@ -346,6 +346,7 @@ body {
   color: #fff;
 }
 
+.banner__image,
 .sr-only {
   position: absolute;
   width: 1px !important;
@@ -896,5 +897,47 @@ dl {
   }
   .image-content--image-right .image-content__body {
     padding-right: 5%;
+  }
+}
+
+.banner {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.banner:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.banner__content {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  text-shadow: 0 0 5px #000;
+}
+.banner__content p:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .banner {
+    padding: 4rem 2rem;
   }
 }

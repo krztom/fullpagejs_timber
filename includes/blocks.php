@@ -9,6 +9,7 @@ $blocks = [
     ImageContent::instance(),
     Testimonials::instance(),
     VideoSet::instance(),
+    Banner::instance(),
 ];
 
 foreach ($blocks as $key => $block) {
