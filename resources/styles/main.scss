@@ -1,4 +1,6 @@
 @import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/transitions";
+
 @import "theme/colors";
 @import "theme/fonts";
 @import "theme/breakpoints";
@@ -8,5 +10,4 @@
 @import "theme/elements";
 
 @import "components";
-@import "blocks";
 @import "blocks";

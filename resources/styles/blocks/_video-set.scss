@@ -1,0 +1,63 @@
+.video-set {
+  padding-top: 5rem;
+
+  &__item-body {
+    position: relative;
+  }
+
+  &__image {
+    background-size: cover;
+    background-position: center center;
+    padding-top: 56.5%;
+  }
+
+  &__play-button {
+    padding: 0;
+    background: $color-secondary;
+    border: none;
+    border-radius: 50%;
+    @include colorSVG(#fff);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__player {
+    position: relative;
+    padding-top: 56.5%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @include min-width('md') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__item {
+      padding: 0 1rem 2rem;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @include min-width('lg') {
+    &__item {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+    }
+  }
+}

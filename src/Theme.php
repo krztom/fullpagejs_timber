@@ -56,13 +56,14 @@ class Theme
     public function scripts()
     {
         $post = get_post();
-        $blocks = parse_blocks($post->post_content);
-
+        if (has_block('acf/video-set', $post->post_content)) {
+            wp_enqueue_script('yt-video-api', 'https://www.youtube.com/iframe_api', array(), 1, true);
+        }
         wp_dequeue_script('wp-embed');
         if (WP_DEBUG || $_SERVER['HTTP_HOST'] == 'localhost') {
-            wp_enqueue_script('teik-main', teik_asset('js/main.js'), array(), '1.0', true);
+            wp_enqueue_script('teik-main', teik_asset('js/main.js'), array('jquery'), '1.0', true);
         } else {
-            wp_enqueue_script('teik-main', teik_asset('js/main.min.js'), array(), '1.0', true);
+            wp_enqueue_script('teik-main', teik_asset('js/main.min.js'), array('jquery'), '1.0', true);
         }
         wp_localize_script('teik-main', 'teik', [
             'ajax_url' => admin_url('admin-ajax.php'),

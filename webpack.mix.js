@@ -36,8 +36,13 @@ mix
   .sass('resources/styles/main.scss', 'css/')
   .setPublicPath('dist')
   .disableNotifications()
+  .webpackConfig({
+    externals: {
+      "jquery": "jQuery"
+    }
+  })
   .sourceMaps();
-if(mix.inProduction()) {
+if (mix.inProduction()) {
   mix.minify('dist/js/main.js');
 }
 // Full API
