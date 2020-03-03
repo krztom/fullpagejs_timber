@@ -12,16 +12,7 @@
   }
 
   &__body {
-    &:after {
-      content: '';
-      display: block;
-      height: 4px;
-      background: $color-secondary;
-      @include shadow($opacity: 0.5);
-      max-width: 500px;
-      border-radius: 3px;
-      margin-top: 4rem;
-    }
+    @include separator;
   }
 
   @include min-width('lg') {
