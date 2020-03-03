@@ -331,7 +331,7 @@ html {
 }
 
 body {
-  color: #000;
+  color: #29235c;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -672,6 +672,84 @@ dl {
   }
 }
 
+.contact-data {
+  display: inline-block;
+  text-align: center;
+}
+.contact-data__intro, .contact-data__phone, .contact-data__below {
+  margin-bottom: 0;
+}
+.contact-data__icon {
+  max-width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+.contact-data__icon svg * {
+  fill: #de0613;
+}
+.contact-data__phone {
+  font-size: 2rem;
+}
+.contact-data__phone a {
+  color: #de0613;
+  font-weight: 700;
+}
+.contact-data__person {
+  margin-bottom: 0;
+}
+.contact-data__person {
+  max-width: 250px;
+  border-radius: 50%;
+  -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 576px) {
+  .contact-data {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: left;
+  }
+  .contact-data__icon {
+    margin: 0;
+  }
+  .contact-data__body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .contact-data {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-data {
+    position: relative;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contact-data__person {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .contact-data__person img {
+    margin-top: -45%;
+  }
+}
+
 .main-banner__body {
   position: relative;
 }
@@ -705,5 +783,34 @@ dl {
 @media (min-width: 1200px) {
   .main-banner__heading {
     font-size: 2.5rem;
+  }
+}
+
+.about-contact {
+  padding: 3rem 0;
+}
+.about-contact__data {
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .about-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .about-contact__content {
+    padding-right: 2rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .about-contact__data {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
   }
 }
