@@ -98,6 +98,10 @@
       transform-origin: 50% 0;
       padding: 2rem 1rem;
       flex-direction: column;
+      background-image: url('../images/menu-bg.jpg');
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: 50% auto;
 
       &.is-open {
         transform: scaleY(1);
@@ -127,6 +131,13 @@
       padding: 0 1rem;
       flex: 1;
       overflow-y: auto;
+      text-align: right;
+      max-width: 600px;
+      margin-left: auto;
+    }
+
+    &__social-media {
+      margin-left: auto;
     }
 
     &__item {
@@ -160,8 +171,6 @@
 
     &__item {
       padding: 0 0.5rem;
-
-
     }
   }
 }

@@ -20,8 +20,8 @@ class Theme
         add_filter('block_categories', [$this, 'blockCategories'], 10, 2);
         add_action('init', [$this, 'removeEmoji']);
         add_action('enqueue_block_editor_assets', [$this, 'editorScripts']);
-        add_filter('wpcf7_load_js', '__return_false');
-        add_filter('wpcf7_load_css', '__return_false');
+        // add_filter('wpcf7_load_js', '__return_false');
+        // add_filter('wpcf7_load_css', '__return_false');
         add_filter('xmlrpc_enabled', '__return_false');
         add_action('phpmailer_init', [$this, 'mailConfig']);
         add_action('acf/init', [$this, 'optionsPage']);

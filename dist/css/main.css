@@ -777,6 +777,10 @@ dl {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background-image: url("../images/menu-bg.jpg");
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
   }
   .nav__wrap.is-open {
     -webkit-transform: scaleY(1);
@@ -811,6 +815,12 @@ dl {
         -ms-flex: 1;
             flex: 1;
     overflow-y: auto;
+    text-align: right;
+    max-width: 600px;
+    margin-left: auto;
+  }
+  .nav__social-media {
+    margin-left: auto;
   }
   .nav__item {
     padding: 0.5rem 0;
@@ -1264,6 +1274,10 @@ dl {
   padding: 0.5rem 1.5rem;
   border: none;
 }
+.form span.wpcf7-not-valid-tip {
+  font-size: 0.8rem;
+  padding: 0 1em;
+}
 
 .footer {
   padding: 3rem 0;
@@ -1290,6 +1304,16 @@ dl {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .footer__contact-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer__address {
+    padding-right: 3rem;
   }
 }
 
