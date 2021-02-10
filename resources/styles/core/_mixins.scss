@@ -9,9 +9,7 @@
 @function max-breakpoint($breakpoint) {
   @if map-has-key($grid-breakpoints, $breakpoint) {
     @return map-get($grid-breakpoints, $breakpoint) - 1px;
-  }
-
-  @else {
+  } @else {
     @return $breakpoint;
   }
 }
@@ -23,7 +21,18 @@
 }
 
 @mixin max-width($breakpoint) {
-  @media (max-width:max-breakpoint($breakpoint)) {
+  @media (max-width: max-breakpoint($breakpoint)) {
+    @content;
+  }
+}
+@mixin landscape() {
+  @media (max-width: 991px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin landscapeTablet() {
+  @media (min-width: 992px) and (max-width: 1351px) and (orientation: landscape) {
     @content;
   }
 }
@@ -43,7 +52,13 @@
   }
 }
 
-@mixin shadow($width: 10px, $color: #000, $opacity: 0.2, $position: 0 5px, $spread: 0) {
+@mixin shadow(
+  $width: 5px,
+  $color: #000,
+  $opacity: 0.2,
+  $position: 0 2px,
+  $spread: 1px
+) {
   box-shadow: $position $width $spread transparentize($color, 1 - $opacity);
 }
 
@@ -60,7 +75,6 @@
   transform: translate(-50%, -50%);
 }
 
-
 @mixin highContrast() {
   body[data-contrast="high"] & {
     @content;
@@ -69,13 +83,12 @@
 
 @mixin separator() {
   &:after {
-    content: '';
+    content: "";
     display: block;
-    height: 4px;
+    height: 5px;
     background: $color-secondary;
-    @include shadow($opacity: 0.5);
-    max-width: 500px;
-    border-radius: 3px;
-    margin-top: 4rem;
+    /*     @include shadow($opacity: 0.5); */
+    max-width: 20%;
+    margin-top: 1rem;
   }
 }

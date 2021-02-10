@@ -42,6 +42,10 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="<?php echo teik_asset('icons/ms-icon-144x144.png');?>">
   <meta name="theme-color" content="#f29209">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Lato:wght@100;300;400;700;900&family=Mitr:wght@400;500;600&family=Montserrat:wght@100;200;300;400;500;600;700;900&family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+</style>
 
   <!-- Wordpress Head START -->
   <?php wp_head(); ?>

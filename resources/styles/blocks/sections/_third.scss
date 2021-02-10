@@ -1,0 +1,102 @@
+.si {
+  &__elements {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__single {
+    display: none;
+    position: absolute;
+
+    .element {
+      transform: $rotate;
+      width: 100%;
+      height: 100%;
+    }
+    @include min-width("md") {
+      &--3 {
+        width: $size * 1.5;
+        height: $size * 5;
+        display: inline-block;
+        left: 26%;
+        bottom: 28%;
+
+        .element {
+          background: linear-gradient(
+            0deg,
+            rgba(105, 225, 251, 1) 10%,
+            rgba(244, 233, 227, 0.2) 60%
+          );
+        }
+      }
+    }
+
+    @include min-width("lg") {
+      &--2 {
+        width: $size * 1.5;
+        height: $size * 4;
+        display: inline-block;
+        left: 32.5%;
+        top: -16%;
+        mix-blend-mode: color;
+
+        .element {
+          background: #7cc2ff;
+        }
+      }
+    }
+    &--1 {
+      width: $size * 1.5;
+      height: $size * 7;
+      display: inline-block;
+      top: 14%;
+      left: 3.5%;
+
+      .element {
+        background: linear-gradient(
+          0deg,
+          rgba(115, 174, 255, 0.6) 25%,
+          rgba(196, 226, 255, 0.4) 100%
+        );
+      }
+    }
+
+    &--3 {
+      width: $size * 1.5;
+      height: $size * 5;
+      display: inline-block;
+      left: 18%;
+      bottom: 0%;
+
+      .element {
+        background: linear-gradient(
+          0deg,
+          rgba(105, 225, 251, 1) 10%,
+          rgba(244, 233, 227, 0.2) 60%
+        );
+      }
+    }
+    &--4 {
+      height: $size * 4.6;
+      width: $size * 2.3;
+      display: inline-block;
+      top: 40%;
+      left: 34%;
+
+      .element {
+        clip-path: circle(65% at -30% 50%);
+        background: linear-gradient(
+          0deg,
+          rgb(193 192 192 / 55%) 20%,
+          rgb(208 208 208 / 20%) 60%
+        );
+      }
+    }
+  }
+}

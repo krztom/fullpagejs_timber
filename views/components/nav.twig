@@ -1,4 +1,5 @@
-<nav id="navigation" class="nav nav--menu">
+<nav id="navigation" class="nav nav--menu nav--main">
+
 	<button type="button" class="nav__toggle js-toggle" data-target="#main-menu">
 		{{ teik_svg('menu-bars.svg') }}
 	</button>
@@ -14,7 +15,7 @@
 		<ul class="nav__menu" data-name="menu">
 			{% for key,item in menus.main.items %}
 				<li class="nav__item {{ item.class }}">
-					<a href="{{ item.link }}" class="nav__link" {{ item.target ? 'target="' ~ item.target ~ '"' : '' }}>
+					<a href="{{ item.link }}" class="nav__link" {{ item.target ? 'target="' ~ item.target ~ '"' : '' }} data-menuanchor="{{item.anchor}}">
 						{{ item.title }}
 						{% if item.isHighlight %}
 							<span class="nav__item-icon" aria-hidden="true">
@@ -22,11 +23,18 @@
 							</span>
 						{% endif %}
 					</a>
+
+          {% if item.children %}
+              <ul class="nav__drop">
+                  {% for child in item.children %}
+                      <li class="nav__drop-item">
+                          <a  class="nav__link"  anchor="{{child.anchor}}" href="{{ child.link }}">{{ child.title }}</a>
+                      </li>
+                  {% endfor %}
+              </ul>
+            {% endif %}
 				</li>
 			{% endfor %}
 		</ul>
-		<div class="nav__social-media">
-			{% include 'components/social-media.twig' %}
-		</div>
 	</div>
 </nav>

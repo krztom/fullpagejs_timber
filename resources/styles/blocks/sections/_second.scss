@@ -1,0 +1,129 @@
+.si {
+  &__elements {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__single {
+    display: none;
+    position: absolute;
+
+    .element {
+      transform: $rotate;
+      width: 100%;
+      height: 100%;
+    }
+
+    &--2 {
+      width: $size * 1.2;
+      height: $size * 6;
+      display: inline-block;
+      bottom: 15%;
+      left: 11.5%;
+
+      @include min-width("md") {
+        bottom: 37%;
+        left: 29.5%;
+      }
+
+      @include min-width("lg") {
+        width: $size * 1.5;
+        height: $size * 7;
+      }
+      @include min-width("xxl") {
+        bottom: 15%;
+        left: 28.5%;
+      }
+      @include min-width("xxxxl") {
+        bottom: 15%;
+        left: 15.5%;
+      }
+
+      .element {
+        background: linear-gradient(
+          0deg,
+          rgba(168, 213, 220, 0.6) 40%,
+          rgba(235, 234, 232, 0.7) 100%
+        );
+      }
+    }
+
+    &--4 {
+      height: $size * 4.6;
+      width: $size * 2.3;
+      display: inline-block;
+      top: 40%;
+      left: 34%;
+      mix-blend-mode: color-burn;
+
+      @include min-width("md") {
+        top: 21%;
+        left: 47%;
+      }
+
+      .element {
+        clip-path: circle(65% at -30% 50%);
+        background: #bb9bb5;
+      }
+    }
+    @include min-width("md") {
+      &--1 {
+        height: $size * 4.6;
+        width: $size * 2.3;
+        display: inline-block;
+        top: 12%;
+        left: -1.5%;
+
+        .element {
+          clip-path: circle(50% at 125% 50%);
+          background: linear-gradient(
+            0deg,
+            rgba(124, 195, 239, 0.1) 40%,
+            rgba(73, 88, 242, 1) 100%
+          );
+        }
+      }
+    }
+    @include min-width("lg") {
+      &--1 {
+        height: $size * 4.6;
+        width: $size * 2.3;
+        display: inline-block;
+        top: 2%;
+        left: 13.5%;
+
+        .element {
+          clip-path: circle(50% at 125% 50%);
+          background: linear-gradient(
+            0deg,
+            rgba(124, 195, 239, 0.1) 40%,
+            rgba(73, 88, 242, 1) 100%
+          );
+        }
+      }
+    }
+    @include min-width("xxxxl") {
+      &--3 {
+        width: $size * 1.5;
+        height: $size * 8;
+        display: inline-block;
+        top: 9%;
+        left: 28%;
+
+        .element {
+          background: linear-gradient(
+            0deg,
+            rgba(244, 233, 227, 0.1) 10%,
+            rgba(197, 183, 212, 1) 100%
+          );
+        }
+      }
+    }
+  }
+}

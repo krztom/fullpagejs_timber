@@ -33,6 +33,7 @@ class TimberConfig
   {
     $context['menus'] =[
       'main' => new Menu('main'),
+      'home' => new Menu('home'),
       'footer_rules' => new Menu('footer_rules')
     ];
     $context['site']->logo = new Image(teik_get_logo());
@@ -58,6 +59,7 @@ class TimberConfig
     $twig->addFunction( new Twig_Function('img', 'teik_image_tag'));
 
     $twig->addFunction( new Twig_Function('teik_icon', 'teik_icon'));
+    $twig->addFunction( new Twig_Function('teik_flags', 'teik_selector_flags'));
     return $twig;
   }
 }

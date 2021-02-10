@@ -1,10 +1,12 @@
-// import $ from 'jquery';
+import $ from "jquery";
 
-export function Toggle(selector = '.js-toggle') {
+export function Toggle(selector = ".js-toggle") {
   let isOpen = false;
-  let openElement = null;
-  const OPEN_CLASS = 'is-open';
+  //let openElement = null;
+  const OPEN_CLASS = "is-open";
   const elements = document.querySelectorAll(selector);
+  const navItem = $("#main-menu .nav__item");
+  const menu = $("#main-menu");
 
   function stopPropagation(event) {
     event.stopPropagation();
@@ -19,22 +21,29 @@ export function Toggle(selector = '.js-toggle') {
 
     if (target) {
       const targetElement = document.querySelector(target);
-      if (isOpen) {
+      if (menu.hasClass("is-open")) {
         targetElement.classList.remove(OPEN_CLASS);
-        openElement = null;
+        //openElement = null;
       } else {
         targetElement.classList.add(OPEN_CLASS);
-        openElement = targetElement;
+        //openElement = targetElement;
       }
       isOpen = !isOpen;
     }
   }
 
+  $(navItem).click(function() {
+    if (menu.hasClass("is-open")) {
+      menu.removeClass("is-open");
+      //openElement = null;
+    }
+  });
+
   function init(element) {
     // console.log(element);
-    element.addEventListener('click', handleClick);
+    element.addEventListener("click", handleClick);
   }
-  elements.forEach((el) => {
+  elements.forEach(el => {
     init(el);
   });
 }

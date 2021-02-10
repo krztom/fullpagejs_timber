@@ -1,0 +1,46 @@
+<section id="IDAktualnosci" class="section news fp-auto-height">
+  <div class="news__wrapper">
+    <div
+      data-aos="fade-up-right"
+      data-aos-duration="800"
+     class="news__stripe news__stripe--before">
+     <div class="element"></div>
+    </div>
+    <div
+    data-aos="fade-down-left"
+    data-aos-duration="800"
+     class="news__stripe news__stripe--after">
+     <div class="element"></div>
+    </div>
+    <h1 class="news__title">
+        Aktualności
+    </h1>
+    <div class="news__items">
+
+      {% for item in Post(selected_news) %}
+
+      <div class="news__single news__single--{{loop.index}}">
+        <figure class="ns__image">
+         {{ img(TimberImage(item._thumbnail_id), 'full') }}
+        </figure>
+        <div class="ns__content">
+          <div class="ns__site">{{item.site}}</div>
+          <h3 class="ns__title">
+            {{item.post_title}}
+          </h3>
+          <div class="ns__text">
+            {{item.post_content}}
+          </div>
+          <div class="ns__button">
+            <a href="{{item.link}}" target="_blank">
+              <span>Zobacz</span>
+              {{ teik_svg('right.svg') }}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>

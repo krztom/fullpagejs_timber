@@ -1,9 +1,0 @@
-<ul class="social-media">
-	{% for item in options.social_media %}
-		<li class="social-media__item">
-			<a href="{{ item.url }}">
-				{{ teik_svg('social-icons/' ~ item.service ~ '.svg') }}
-			</a>
-		</li>
-	{% endfor %}
-</ul>

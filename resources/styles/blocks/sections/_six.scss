@@ -1,0 +1,102 @@
+.si {
+  &__elements {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__single {
+    display: none;
+    position: absolute;
+
+    .element {
+      transform: $rotate;
+      width: 100%;
+      height: 100%;
+    }
+
+    @include min-width("md") {
+      &--1 {
+        height: $size * 5.4;
+        width: $size * 2.7;
+        display: inline-block;
+        top: 15%;
+        left: -4.4%;
+
+        mix-blend-mode: color-burn;
+
+        .element {
+          clip-path: circle(50% at 135% 50%);
+          background: linear-gradient(
+            0deg,
+            rgba(#d0ecf3, 0.9) 25%,
+            rgba(#e1b3c1, 0.9) 100%
+          );
+        }
+      }
+      &--2 {
+        width: $size * 1.5;
+        height: $size * 6.5;
+        display: inline-block;
+        left: 8%;
+        bottom: 10%;
+
+        mix-blend-mode: darken;
+
+        .element {
+          background: linear-gradient(
+            0deg,
+            rgba(#e9cfb6, 0.9) 5%,
+            rgba(#cdeaf1, 0.8) 100%
+          );
+        }
+      }
+    }
+
+    &--3 {
+      width: $size * 1.5;
+      height: $size * 6;
+      display: inline-block;
+      left: 33%;
+      bottom: 13%;
+      mix-blend-mode: darken;
+
+      @include min-width("lg") {
+        height: $size * 7;
+      }
+
+      .element {
+        background: linear-gradient(
+          0deg,
+          rgba(#cdeaf1, 0.8) 70%,
+          rgba(#ecc905, 0.9) 100%
+        );
+      }
+    }
+    &--4 {
+      width: $size * 1.5;
+      height: $size * 7;
+      display: inline-block;
+      top: 30%;
+      left: 50%;
+      mix-blend-mode: darken;
+
+      @include min-width("xxl") {
+        left: 40%;
+      }
+
+      .element {
+        background: linear-gradient(
+          0deg,
+          rgba(#d0ecf3, 0.9) 25%,
+          rgba(#e1b3c1, 0.9) 100%
+        );
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
-$color-primary: #29235c;
+$color-primary: #4a4a4a;
 $color-primary-light: lighten($color-primary, 10%);
 $color-primary-dark: darken($color-primary, 10%);
 $primary: $color-primary;
 
-$color-secondary: #de0613;
+$color-secondary: #4964ea;
 $color-secondary-light: lighten($color-secondary, 10%);
 $color-secondary-dark: darken($color-secondary, 10%);
 
@@ -11,6 +11,8 @@ $color-text: $color-primary;
 $color-text-secondary: #0e0e0e;
 
 $secondary: $color-secondary;
+
+$color-link: #9ae4e7;
 
 $color-success: #64dd17;
 $color-success-dark: darken($color-success, 10%);

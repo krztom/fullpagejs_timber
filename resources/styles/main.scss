@@ -1,10 +1,15 @@
+@import "theme/breakpoints";
+
 @import "~bootstrap/scss/bootstrap-reboot";
 @import "~bootstrap/scss/transitions";
 @import "~swiper/swiper";
 
+@import "~aos/dist/aos";
+
+@import "~fullpage.js/dist/fullpage";
+
 @import "theme/colors";
 @import "theme/fonts";
-@import "theme/breakpoints";
 
 @import "core/mixins";
 

@@ -1,0 +1,89 @@
+.si {
+  &__elements {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__single {
+    display: none;
+    position: absolute;
+
+    .element {
+      transform: $rotate;
+      width: 100%;
+      height: 100%;
+    }
+
+    @include min-width("md") {
+      &--2 {
+        height: $size * 8;
+        width: $size * 1.5;
+        display: inline-block;
+        top: -3%;
+        left: 12%;
+        mix-blend-mode: darken;
+
+        .element {
+          background: rgb(215 229 227);
+        }
+      }
+      &--3 {
+        width: $size * 1.5;
+        height: $size * 5.5;
+        display: inline-block;
+        left: 12%;
+        bottom: -1%;
+        mix-blend-mode: darken;
+
+        .element {
+          background: linear-gradient(
+            0deg,
+            rgba(#f7dce7, 0.8) 30%,
+            rgba(#b7efff, 0.1) 100%
+          );
+        }
+      }
+    }
+
+    &--4 {
+      width: $size * 2;
+      height: $size * 7.8;
+      display: inline-block;
+      top: 14.6%;
+      left: 30%;
+      mix-blend-mode: darken;
+
+      .element {
+        background: linear-gradient(
+          0deg,
+          rgba(#eeeeec, 0.9) 25%,
+          rgba(#ccdfdd, 0.9) 100%
+        );
+      }
+    }
+    &--5 {
+      height: $size * 8;
+      width: $size * 4;
+      display: inline-block;
+      top: 42%;
+      left: 36%;
+      mix-blend-mode: darken;
+
+      .element {
+        clip-path: circle(50% at -30% 50%);
+        background: linear-gradient(
+          0deg,
+          rgba(#f4bfd1, 0.98) 0%,
+          rgba(#b7efff, 0.1) 50%,
+          rgba(#f4bfd1, 0.98) 100%
+        );
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+.si {
+  &__elements {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__single {
+    display: none;
+    position: absolute;
+
+    .element {
+      transform: $rotate;
+      width: 100%;
+      height: 100%;
+    }
+    @include min-width("md") {
+      &--1 {
+        width: $size * 0.8;
+        height: $size * 5;
+        display: inline-block;
+        top: 14%;
+        left: 6.5%;
+
+        .element {
+          background: linear-gradient(
+            0deg,
+            rgba(244, 244, 243, 0.9) 25%,
+            rgba(251, 249, 249, 0.1) 100%
+          );
+        }
+      }
+      &--5 {
+        height: $size * 6;
+        width: $size * 3;
+        display: inline-block;
+        top: 25%;
+        left: 49.65%;
+
+        .element {
+          clip-path: circle(50% at -30% 50%);
+          background: linear-gradient(
+            0deg,
+            rgba(236, 238, 239, 0.1) 25%,
+            rgba(191, 191, 191, 0.9) 100%
+          );
+        }
+      }
+    }
+
+    @include min-width("lg") {
+      &--1 {
+        width: $size * 0.8;
+        height: $size * 5;
+        display: inline-block;
+        top: 14%;
+        left: 6.5%;
+
+        .element {
+          background: linear-gradient(
+            0deg,
+            rgba(244, 244, 243, 0.9) 25%,
+            rgba(251, 249, 249, 0.1) 100%
+          );
+        }
+      }
+      &--2 {
+        width: $size * 1.5;
+        height: $size * 7;
+        display: inline-block;
+        left: 13.5%;
+        top: 5%;
+        /*    mix-blend-mode: color; */
+
+        .element {
+          background: linear-gradient(
+            0deg,
+            rgba(236, 238, 239, 0.1) 25%,
+            rgba(236, 238, 239, 0.9) 100%
+          );
+        }
+      }
+      &--3 {
+        width: $size * 1.5;
+        height: $size * 7;
+        display: inline-block;
+        left: 20%;
+        bottom: 11%;
+
+        .element {
+          background: linear-gradient(
+            0deg,
+            rgba(197, 197, 196, 1) 0%,
+            rgba(251, 251, 250, 0.1) 30%,
+            rgba(251, 251, 250, 0.1) 70%,
+            rgba(197, 197, 196, 1) 100%
+          );
+        }
+      }
+    }
+
+    &--4 {
+      width: $size * 1.2;
+      height: $size * 4;
+      display: inline-block;
+      top: 22%;
+      left: 38%;
+
+      @include min-width("lg") {
+        width: $size * 1.5;
+        height: $size * 4;
+        top: 12%;
+      }
+
+      .element {
+        background: linear-gradient(
+          0deg,
+          rgba(236, 238, 239, 0.1) 25%,
+          rgba(191, 191, 191, 0.9) 100%
+        );
+      }
+    }
+    &--5 {
+      height: $size * 6;
+      width: $size * 3;
+      display: inline-block;
+      top: 35%;
+      left: 36.65%;
+
+      .element {
+        clip-path: circle(50% at -30% 50%);
+        background: linear-gradient(
+          0deg,
+          rgba(236, 238, 239, 0.1) 25%,
+          rgba(191, 191, 191, 0.9) 100%
+        );
+      }
+    }
+  }
+}

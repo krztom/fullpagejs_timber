@@ -1,0 +1,210 @@
+.si {
+  &__elements {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  &__animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__single {
+    display: none;
+    position: absolute;
+
+    .element {
+      transform: $rotate;
+      width: 100%;
+      height: 100%;
+    }
+    &--1 {
+      height: $size * 4.6;
+      width: $size * 2.3;
+      display: inline-block;
+      mix-blend-mode: color-burn;
+      bottom: 0%;
+      left: -30%;
+
+      @include min-width("md") {
+        bottom: 30%;
+        left: 10%;
+      }
+
+      @include min-width("lg") {
+        top: 8%;
+        left: 2.4%;
+      }
+
+      .element {
+        clip-path: circle(50% at 135% 50%);
+        background: rgba(73, 88, 242, 1);
+      }
+    }
+
+    &--2 {
+      width: $size * 1.2;
+      height: $size * 6;
+      display: inline-block;
+      mix-blend-mode: darken;
+
+      @include min-width("xl") {
+        bottom: 16%;
+        left: 20.5%;
+      }
+      @include min-width("xxl") {
+        bottom: 16%;
+        left: 25.5%;
+      }
+
+      @include min-width("xxxxl") {
+        bottom: 16%;
+        left: 15.5%;
+      }
+
+      .element {
+        background: radial-gradient(
+          circle,
+          rgba(180, 219, 236, 0.5) 0%,
+          rgba(124, 195, 239, 1) 100%
+        );
+      }
+    }
+
+    &--5 {
+      height: $size * 5;
+      width: $size * 1.2;
+      display: inline-block;
+      top: -34%;
+      left: 66.6%;
+      mix-blend-mode: darken;
+
+      @include min-width("md") {
+        top: -14%;
+        left: 46.6%;
+      }
+
+      .element {
+        clip-path: circle(60% at 60% 61%);
+        background: radial-gradient(
+          circle,
+          rgba(77, 89, 233, 1) 0%,
+          rgba(91, 160, 232, 0.1) 100%
+        );
+      }
+    }
+
+    @include min-width("md") {
+      &--4 {
+        height: $size * 4.6;
+        width: $size * 2.3;
+        display: inline-block;
+        top: 52%;
+        left: 28.5%;
+        mix-blend-mode: color-burn;
+
+        .element {
+          clip-path: circle(50% at -30% 50%);
+          background: linear-gradient(0deg, #94e4e7 0%, #1476e4 35%);
+        }
+      }
+      &--6 {
+        height: $size * 5;
+        width: $size * 1.2;
+        display: inline-block;
+        top: 27%;
+        left: 54.1%;
+        mix-blend-mode: color-burn;
+
+        .element {
+          clip-path: circle(60% at 60% 61%);
+          background: #a073b5;
+        }
+      }
+    }
+    @include min-width("lg") {
+      &--5 {
+        height: $size * 5;
+        width: $size * 1.2;
+        display: inline-block;
+        top: 12%;
+        left: 49.6%;
+        mix-blend-mode: darken;
+
+        .element {
+          clip-path: circle(60% at 60% 61%);
+          background: radial-gradient(
+            circle,
+            rgba(77, 89, 233, 1) 0%,
+            rgba(91, 160, 232, 0.1) 100%
+          );
+        }
+      }
+
+      &--7 {
+        height: $size * 4.6;
+        width: $size * 2.3;
+        display: inline-block;
+        top: 34%;
+        left: 65.5%;
+        mix-blend-mode: color-burn;
+
+        .element {
+          clip-path: circle(50% at -30% 50%);
+          background: radial-gradient(
+            circle,
+            rgba(66, 216, 223, 1) 35%,
+            rgba(20, 118, 228, 1) 100%
+          );
+        }
+      }
+    }
+    @include min-width("xxl") {
+      &--4 {
+        height: $size * 4.6;
+        width: $size * 2.3;
+        display: inline-block;
+        top: 52%;
+        left: 28.5%;
+        mix-blend-mode: color-burn;
+
+        .element {
+          clip-path: circle(50% at -30% 50%);
+          background: linear-gradient(0deg, #94e4e7 0%, #1476e4 35%);
+        }
+      }
+    }
+    @include min-width("xxxxl") {
+      &--3 {
+        height: $size * 5.5;
+        width: $size * 2.75;
+        display: inline-block;
+        top: 9%;
+        left: 21%;
+
+        .element {
+          clip-path: circle(50% at 135% 50%);
+          background: linear-gradient(
+            0deg,
+            rgba(240, 240, 240, 0.1) 10%,
+            rgba(130, 131, 128, 1) 100%
+          );
+        }
+      }
+      &--6 {
+        height: $size * 5;
+        width: $size * 1.2;
+        display: inline-block;
+        top: 27%;
+        left: 54.1%;
+        mix-blend-mode: color-burn;
+
+        .element {
+          clip-path: circle(60% at 60% 61%);
+          background: #a073b5;
+        }
+      }
+    }
+  }
+}

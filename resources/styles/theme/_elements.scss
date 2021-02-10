@@ -8,6 +8,17 @@ body {
   font-size: 18px;
 }
 
+/* .pagewrap {
+  margin-top: -130px;
+}
+.sticky {
+  margin-top: -10px;
+
+  @include min-width("xl") {
+    margin-top: -40px;
+  }
+} */
+
 ::selection {
   background: $color-primary;
   color: #fff;
@@ -57,6 +68,9 @@ img {
   height: auto;
   display: inline-block;
 }
+.wp-block-image img {
+  border-radius: 4rem;
+}
 
 button {
   cursor: pointer;
@@ -78,14 +92,143 @@ $grid-gutter-width: 2rem;
 .container {
   @include make-container;
   @include make-container-max-widths;
+  @include min-width(1200px) {
+    max-width: 1500px;
+  }
 
   @include min-width(1630px) {
     max-width: 1600px;
   }
 
-  @include min-width('xl') {
+  @include min-width("xl") {
     &--narrow {
       max-width: 1000px;
+    }
+  }
+}
+
+.button {
+  background: $primary;
+  color: #fff;
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  max-width: 120px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  transition: all 1s ease-out;
+
+  text-decoration: none;
+
+  svg {
+    fill: #fff;
+    transform: rotate(180deg);
+    max-width: 25%;
+    transition: all 0.3s ease-out;
+  }
+  &:hover,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 5px auto $color-primary;
+
+    svg {
+      margin-left: 15px;
+    }
+  }
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 25px;
+  left: calc(50% - 25px);
+  cursor: pointer;
+  transition: all 0.5s;
+  display: none;
+
+  @include min-width("xl") {
+    display: flex;
+  }
+
+  &:hover {
+    transform: translateY(15px);
+    svg {
+      fill: $color-link;
+    }
+  }
+  svg {
+    max-width: 50px;
+    fill: #fff;
+    transition: all 1s;
+  }
+
+  &.sticky {
+    svg {
+      max-width: 50px;
+      fill: $primary;
+    }
+    &:hover {
+      svg {
+        fill: $color-link;
+      }
+    }
+  }
+  &.hidden {
+    display: none;
+  }
+
+  &--up {
+    transform: rotate(180deg);
+    display: flex;
+
+    @include max-width("xl") {
+      bottom: 10px;
+    }
+
+    &:hover {
+      transform: rotate(180deg) translateY(15px);
+      svg {
+        fill: $color-link;
+      }
+    }
+  }
+}
+
+#maincontent {
+  background: #292a2a;
+
+  #pagecontent {
+    background: #fff;
+  }
+}
+.error404 {
+  &__body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background-image: url("../images/errorbackground.jpg");
+
+    .heading {
+      color: #fff;
+      text-shadow: 1px 1px 1px black;
+    }
+  }
+  &__code {
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+    font-size: 3rem;
+  }
+  &__actions {
+    .button {
+      margin-top: 1rem;
+      max-width: 250px;
+      padding: 15px 20px;
+      font-size: 16px;
     }
   }
 }

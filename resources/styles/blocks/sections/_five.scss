@@ -1,0 +1,158 @@
+.si {
+  &__elements {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__single {
+    display: none;
+    position: absolute;
+
+    .element {
+      transform: $rotate;
+      width: 100%;
+      height: 100%;
+    }
+    &--2 {
+      width: $size * 1.5;
+      height: $size * 5;
+      display: inline-block;
+      left: 14.5%;
+      top: 20%;
+      /*    mix-blend-mode: color; */
+
+      .element {
+        background: linear-gradient(
+          0deg,
+          rgba(#f1d2e0, 0.5) 0%,
+          rgba(177, 235, 232, 0.3) 50%,
+          rgba(177, 235, 232, 0.9) 100%
+        );
+      }
+    }
+    &--5 {
+      height: $size * 6;
+      width: $size * 3;
+      display: inline-block;
+      top: 35%;
+      left: 36.65%;
+      mix-blend-mode: darken;
+
+      @include min-width("md") {
+        top: 25%;
+        left: 56.65%;
+      }
+
+      @include min-width("xxl") {
+        top: 35%;
+        left: 26.65%;
+      }
+
+      @include min-width("xxxxl") {
+        top: 35%;
+        left: 36.65%;
+      }
+
+      .element {
+        clip-path: circle(50% at -30% 50%);
+        background: rgba(#0160f2, 0.4);
+      }
+    }
+    @include min-width("md") {
+      &--3 {
+        width: $size * 1.5;
+        height: $size * 6;
+        display: inline-block;
+        left: 18%;
+        bottom: 20%;
+
+        @include min-width("xxl") {
+          left: 23%;
+          bottom: 20%;
+        }
+
+        @include min-width("xxxxl") {
+          left: 18%;
+          bottom: 20%;
+        }
+
+        mix-blend-mode: color-burn;
+
+        .element {
+          background: #46c5f3;
+        }
+      }
+    }
+
+    @include min-width("lg") {
+      &--2 {
+        width: $size * 1.5;
+        height: $size * 7;
+        display: inline-block;
+        left: 14.5%;
+        top: -2%;
+        /*    mix-blend-mode: color; */
+
+        .element {
+          background: linear-gradient(
+            0deg,
+            rgba(#f1d2e0, 0.5) 0%,
+            rgba(177, 235, 232, 0.3) 50%,
+            rgba(177, 235, 232, 0.9) 100%
+          );
+        }
+      }
+      &--3 {
+        width: $size * 1.5;
+        height: $size * 6;
+        display: inline-block;
+        left: 18%;
+        bottom: 20%;
+
+        @include min-width("xxl") {
+          left: 23%;
+          bottom: 20%;
+        }
+
+        @include min-width("xxxxl") {
+          left: 18%;
+          bottom: 20%;
+        }
+
+        mix-blend-mode: color-burn;
+
+        .element {
+          background: #46c5f3;
+        }
+      }
+    }
+    @include min-width("xxxxl") {
+      &--4 {
+        width: $size * 1.5;
+        height: $size * 6;
+        display: inline-block;
+        top: 18%;
+        left: 30%;
+
+        @include min-width("lg") {
+          top: 7%;
+          height: $size * 8;
+        }
+
+        .element {
+          background: linear-gradient(
+            0deg,
+            rgba(236, 238, 239, 0.1) 25%,
+            rgba(#bae4e6, 0.9) 100%
+          );
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+
+
+{% set contentPosition = alignment == 'left' ? 'left' : 'right' %}
+
+<section id="ID{{anchor}}" class="section section--{{id}}" style="background-image: linear-gradient(90deg, rgba(255,255,255, 0.85 ) 20%,rgba(255,255,255, 0.1 )100%), url({{TimberImage(background_image).src('full')}})">
+  <div class="section__wrapper section__wrapper-{{contentPosition}}">
+    <div class="section__content">
+      <h2 class="sc__title heading">
+          {{title}}
+      </h2>
+      <div class="sc__text">
+        {{text}}
+      </div>
+
+      <div class="sc__bottom">
+      {% if facebook or instagram or youtube or linkedin %}
+      <div class="sc__socials">
+
+        {% if facebook %}
+            <a href="{{facebook}}" target="_blank" class="header__facebook">
+              {{ teik_svg('facebook.svg') }}
+            </a>
+        {% endif %}
+        {% if instagram %}
+          <a href="{{instagram}}" target="_blank" class="header__facebook">
+            {{ teik_svg('instagram.svg') }}
+          </a>
+          {% endif %}
+          {% if youtube %}
+          <a href="{{youtube}}" target="_blank" class="header__facebook">
+            {{ teik_svg('youtube.svg') }}
+          </a>
+          {% endif %}
+          {% if linkedin %}
+         <a href="{{linkedin}}" target="_blank" class="header__facebook">
+            {{ teik_svg('linkedin.svg') }}
+          </a>
+          {% endif %}
+      </div>
+
+      {% endif %}
+
+
+        {% if button %}
+        <a class="button" href="{{button}}" target="_blank">
+                    <span>więcej</span>
+            {{ teik_svg('go-back-left-arrow.svg') }}
+
+        </a>
+
+        {% endif %}
+      </div>
+    </div>
+    <div class="section__image">
+      <div class="si__imageWrapper">
+        {% if image %}
+          <figure class="si__picture" {# style="background-image: radial-gradient(circle, rgba(182,182,182,0.00001) 20%, rgba(255,255,255,1) 65%), url({{TimberImage(image).src('full')}})"> #}>
+            {{ img(TimberImage(image), 'full') }}
+          </figure>
+        {% endif %}
+      </div>
+      <div class="si__elements">
+        <div
+          data-aos="fade-down-left"
+          data-aos-duration="800"
+          class="si__single si__single--1">
+          <div class="element"></div>
+        </div>
+        <div
+          data-aos="fade-up-right"
+          data-aos-duration="800"
+         class="si__single si__single--2" style="--i: 1; --n: 8">
+          <div class="element"></div>
+         </div>
+        <div
+          data-aos="fade-down-left"
+          data-aos-duration="800"
+          class="si__single si__single--3" style="--i: 2; --n: 8">
+            <div class="element"></div>
+         </div>
+        <div
+        class="si__single si__single--4"
+        data-aos="fade-up-right"
+        data-aos-duration="800"
+        >
+          <div class="element"></div>
+        </div>
+        <div
+        class="si__single si__single--5"
+        data-aos="fade-down-left"
+        data-aos-duration="800"
+        >
+          <div class="element"></div>
+        </div>
+        <div class="si__single si__single--6"
+        data-aos="fade-up-right"
+        data-aos-duration="800"
+        data-aos-delay="220"
+        >
+          <div class="element"></div>
+        </div>
+        <div class="si__single si__single--7"
+        data-aos="fade-down-left"
+        data-aos-duration="800"
+        data-aos-delay="220">
+          <div class="element"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
